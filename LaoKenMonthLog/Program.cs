@@ -7,6 +7,9 @@ using System.Data;
 
 namespace LaoKenMonthLog
 {
+    /// <summary>
+    /// TAPD 工时报表【1、导出明细报表，2、注册右键，3、生成月报】
+    /// </summary>
     internal class Program
     {
         private static string SaveToPath => ConfigurationManager.AppSettings[nameof(SaveToPath)];

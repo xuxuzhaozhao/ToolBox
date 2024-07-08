@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\OpenWithMyProgram]
+@="月报生成器o(^▽^)o"
+
+[HKEY_CLASSES_ROOT\*\shell\OpenWithMyProgram\command]
+@="\"D:\\01Development\\ToolBox\\LaoKenMonthLog\\bin\\Debug\\net8.0\\LaoKenMonthLog.exe\" \"%1\""
