@@ -246,6 +246,7 @@ namespace LaoKenMonthLog
             alignCenterCellStyle.BorderLeft = BorderStyle.Thin;
             alignCenterCellStyle.BorderRight = BorderStyle.Thin;
             alignCenterCellStyle.BorderTop = BorderStyle.Thin;
+            alignCenterCellStyle.WrapText = true;
 
             return alignCenterCellStyle;
         }
