@@ -79,7 +79,9 @@ namespace LaoKenMonthLog
 
             if (!double.TryParse(hour, out double hourDouble)) return;
 
-            story = story.Split('\r', '\n')[0].Replace("【Story】", "");
+            story = story.Split('\r', '\n')[0]
+                .Replace("【Story】", "")
+                .Replace("【CSSD 消毒追溯管理系统】", "");
             if (all.ContainsKey(story))
             {
                 all[story] = all[story] + hourDouble;
