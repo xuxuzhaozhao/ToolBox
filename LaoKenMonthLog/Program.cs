@@ -56,6 +56,9 @@ namespace LaoKenMonthLog
                 AddData(all, story, hour);
             }
 
+            all = all.OrderBy(kv => kv.Value)
+                .ToDictionary(kv => kv.Key, kv => kv.Value);
+
             foreach (var key in all.Keys)
             {
                 Console.WriteLine($"{key} ===> {all[key]}");
