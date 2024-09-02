@@ -7,7 +7,7 @@ namespace ChatGPT_TestProject
 {
     internal class Program
     {
-        private static readonly string apiKey = "sk-uH2ZfAZUDRwLzuIlC5496fDd930743A8Ba36A04c208d4217"; // 替换为你的API密钥
+        private static readonly string apiKey = ""; // 替换为你的API密钥
         private static readonly string apiUrl = "http://110.40.41.167:21531/v1/chat/completions";
 
         static async Task Main(string[] args)
