@@ -13,12 +13,11 @@ namespace LaoKenWeekLog
         private static readonly string Uri = ConfigurationManager.AppSettings["Uri"];
         private static readonly string Token = ConfigurationManager.AppSettings["Token"];
         private static readonly string Model = ConfigurationManager.AppSettings["Model"];
+        private static readonly string Prompt = ConfigurationManager.AppSettings["Prompt"];
 
         public static async Task<string> SendChatGPTRequest(string prompt)
         {
-            var random = new Random();
-            var randomNumber = random.Next(11, 15);
-            prompt = $"根据以下内容，无论我给多给少都只帮我总结{randomNumber}条周报出来，每条结论内不用换行，每条之间只换一行（请按照以下格式回答我：数字、总结的内容：总结的详情；）：{prompt}";
+            prompt = $"{Prompt}{prompt}";
 
             using var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
@@ -28,7 +27,7 @@ namespace LaoKenWeekLog
                 model = Model, // 选择你要使用的模型
                 messages = new[]
                 {
-                    new { role = "system", content = "换行符使用‘\r\n’" },
+                    new { role = "system", content = "" },
                     new { role = "user", content = prompt }
                 }
             };
